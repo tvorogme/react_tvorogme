@@ -92,6 +92,8 @@
   },
   "devDependencies": {
     "node-sass": "^4.9.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "sass-loader": "^7.0.3",
     "webpack": "^3.8.1"
   }

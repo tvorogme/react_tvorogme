@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
 import styles from './styles/atoms/basics.scss';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import PageNotFound from './screens/PageNotFound'
+import MainScreen from './screens/MainScreen'
 
 class App extends Component {
     render() {
-        console.log(styles.myCoolHeader);
-        return (
-            <div>
-                <header>
-                    <h1 className={styles.myCoolHeader}>Welcome to React</h1>
-                </header>
-                <p>
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
-            </div>
-        );
+        return <Router>
+            <Switch>
+                <Route path="/" component={MainScreen}/>
+                <Route render={PageNotFound}/>
+            </Switch>
+        </Router>
     }
 }
 
